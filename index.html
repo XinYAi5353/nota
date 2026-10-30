@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nota · 让五线谱自己弹起来 — 下载与教程</title>
+    <meta
+      name="description"
+      content="Nota 五线谱演奏台：自动识谱（图片 / PDF / MusicXML / MIDI）、真钢琴采样演奏、可调 BPM、单曲与专辑循环、手机与桌面编辑、MusicXML / MIDI 导出。Windows 与 Android 免费下载。"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <meta property="og:title" content="Nota · 让五线谱自己弹起来" />
+    <meta property="og:description" content="自动识谱、真钢琴演奏、可调 BPM、单曲 / 专辑循环，Windows 与 Android 免费下载。" />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="http://notafun.com/" />
+    <meta property="og:url" content="http://notafun.com/" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="nav" id="top">
+      <div class="container nav-inner">
+        <a class="brand" href="#top" aria-label="Nota 首页">
+          <span class="brand-mark">♪</span>
+          <span class="brand-text">
+            <b>Nota</b>
+            <small>五线谱演奏台</small>
+          </span>
+        </a>
+
+        <nav class="nav-links" id="navLinks" aria-label="主导航">
+          <a href="#features">功能</a>
+          <a href="#screens">界面</a>
+          <a href="#download">下载</a>
+          <a href="#tutorials">教程</a>
+          <a href="#faq">常见问题</a>
+        </nav>
+
+        <div class="nav-actions">
+          <span class="version-pill">v1.22.0</span>
+          <a class="btn btn-primary btn-sm" href="#download">立即下载</a>
+          <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ===================== HERO ===================== -->
+      <section class="hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Windows · Android · 完全离线</span>
+            <h1>
+              让五线谱，<br />
+              <span class="grad">自己弹起来</span>
+            </h1>
+            <p class="lead">
+              Nota 是一款白色极简的五线谱演奏台：拍照或导入 PDF 自动识谱，用真实钢琴采样演奏；可调 BPM、单曲 / 专辑循环，还能像打字一样写谱。
+            </p>
+
+            <div class="hero-cta">
+              <a class="btn btn-primary btn-lg" href="https://github.com/nihaowshixiaow/nota/releases/download/v1.22.0/Nota-1.22.0-portable.exe" download>
+                ↓ Windows 版下载
+              </a>
+              <a class="btn btn-ghost btn-lg" href="https://github.com/nihaowshixiaow/nota/releases/download/v1.22.0/Nota-1.22.0-android.apk" download>
+                <span aria-hidden="true">🤖</span> Android APK
+              </a>
+              <a class="btn btn-link btn-lg" href="#tutorials">先看教程 →</a>
+            </div>
+
+            <ul class="hero-meta">
+              <li>✓ 免费使用</li>
+              <li>✓ 无需联网</li>
+              <li>✓ 数据只存本机</li>
+              <li>✓ Windows / Android</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual">
+            <div class="browser-frame">
+              <div class="browser-bar">
+                <i></i><i></i><i></i>
+                <span class="browser-url">http://notafun.com/</span>
+              </div>
+              <img src="assets/player.png" alt="Nota 播放界面：五线谱与钢琴键盘" />
+            </div>
+            <div class="float-card float-card-1">
+              <b>♩ = 96</b>
+              <small>BPM 实时可调</small>
+            </div>
+            <div class="float-card float-card-2">
+              <b>🖼 参考图对照</b>
+              <small>半透明背景 / 可拖动小窗</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== FEATURES ===================== -->
+      <section class="section" id="features">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">核心功能</span>
+            <h2>从一张照片，到一首会自己弹的谱</h2>
+            <p>能识谱、能编辑、能演奏、能导出。全部在本地完成，不上传你的乐谱。</p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-icon">📷</div>
+              <h3>自动识谱</h3>
+              <p>支持 JPG / PNG / 截图 / PDF 导入；内置快速引擎 0.2 秒出结果，桌面端还可以接 Audiveris 或 AI 视觉模型提升精度。</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">🎹</div>
+              <h3>真实钢琴采样</h3>
+              <p>内置 Salamander 三角钢琴采样，不是电子音；也可以切换柔和钢琴或电子音色，音量、节拍器、钢琴键盘都可调。</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">⏱</div>
+              <h3>BPM 与循环</h3>
+              <p>实时调整速度，支持单曲循环、专辑循环、顺序播放；可设置每首曲子的播放前预备倒计时与提示音。</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">⌨</div>
+              <h3>像打字一样写谱</h3>
+              <p>音符键盘 + 打字输入模式：A–G 写音名、1–6 选时值；手机也能调出系统键盘写谱，编辑面板会自动让出谱面空间。</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">🖼</div>
+              <h3>参考图对照</h3>
+              <p>导入原谱图片作为参考：可半透明铺在谱面下方，也可放进可拖动、可拉伸的悬浮小窗，跟着原谱写谱不跑偏。</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">↔</div>
+              <h3>标准格式进出</h3>
+              <p>支持导入 MusicXML / MXL / MIDI，曲库一键导出 MusicXML 与 MIDI；导出的谱子可直接用 MuseScore 打开。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== SCREENS ===================== -->
+      <section class="section section-soft" id="screens">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">界面预览</span>
+            <h2>白色、干净、专注</h2>
+            <p>没有多余按钮，打开就能看谱、听谱、改谱。</p>
+          </div>
+
+          <div class="shot-grid">
+            <figure class="shot-card shot-wide">
+              <img src="assets/library.png" alt="Nota 曲库界面" />
+              <figcaption>
+                <b>我的曲库</b>
+                <span>多首乐谱统一管理，支持专辑循环与顺序调整。</span>
+              </figcaption>
+            </figure>
+            <figure class="shot-card">
+              <img src="assets/import.png" alt="Nota 识别导入界面" />
+              <figcaption>
+                <b>识别导入</b>
+                <span>图片 / PDF / MusicXML / MIDI / .lysc 都能进来。</span>
+              </figcaption>
+            </figure>
+            <figure class="shot-card">
+              <img src="assets/mobile-palette.png" alt="Nota 手机音符键盘" />
+              <figcaption>
+                <b>手机音符键盘</b>
+                <span>标签页 + 图标网格，大按钮不误触。</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== DOWNLOAD ===================== -->
+      <section class="section" id="download">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">下载</span>
+            <h2>选择你的版本</h2>
+            <p>
+              当前版本 <b>v1.22.0</b> · 更新于 2026-10-30 · Windows 10/11 64 位、Android 6.0+。
+              安装包下载由 GitHub Releases 提供（国内访问可能需要加速）。所有安装包都没有代码签名，安装时若系统提示请选择“仍要运行 / 信任”。
+            </p>
+          </div>
+
+          <div class="download-grid">
+            <article class="download-card download-primary">
+              <div class="download-head">
+                <div class="download-icon">🪟</div>
+                <div>
+                  <span class="tag">推荐 · Windows</span>
+                  <h3>便携版（单文件 exe）</h3>
+                </div>
+              </div>
+              <p>下载后双击直接运行，无需安装；适合放在桌面或 U 盘。</p>
+              <div class="download-meta">
+                <span>v1.22.0</span><span>·</span><span>90.4 MB</span><span>·</span><span>Windows x64</span>
+              </div>
+              <a class="btn btn-primary btn-block" href="https://github.com/nihaowshixiaow/nota/releases/download/v1.22.0/Nota-1.22.0-portable.exe" download>↓ 下载便携版</a>
+              <div class="sha-row">
+                <code>FFD5EC0F…E117AE</code>
+                <button class="copy-btn" data-copy="FFD5EC0F280CBA15F4B7FE3358B92C7D9431C283405B52294848538137E117AE">复制 SHA-256</button>
+              </div>
+            </article>
+
+            <article class="download-card">
+              <div class="download-head">
+                <div class="download-icon">📦</div>
+                <div>
+                  <span class="tag">Windows 免安装</span>
+                  <h3>完整 zip 压缩包</h3>
+                </div>
+              </div>
+              <p>解压到任意目录后运行 <code>Nota.exe</code>，适合需要保留程序文件的用户。</p>
+              <div class="download-meta">
+                <span>v1.22.0</span><span>·</span><span>130.3 MB</span><span>·</span><span>Windows x64</span>
+              </div>
+              <a class="btn btn-outline btn-block" href="https://github.com/nihaowshixiaow/nota/releases/download/v1.22.0/Nota-1.22.0-win-x64.zip" download>↓ 下载 zip 包</a>
+              <div class="sha-row">
+                <code>5E07ABC5…68F03656</code>
+                <button class="copy-btn" data-copy="5E07ABC518FF9644BE7321A1AFF1D639C37CBB21D7FF0BB433D6A61668F03656">复制 SHA-256</button>
+              </div>
+            </article>
+
+            <article class="download-card">
+              <div class="download-head">
+                <div class="download-icon">🤖</div>
+                <div>
+                  <span class="tag">Android</span>
+                  <h3>手机 / 平板 APK</h3>
+                </div>
+              </div>
+              <p>支持 Android 6.0 及以上；安装时允许“安装未知来源应用”即可。</p>
+              <div class="download-meta">
+                <span>v1.22.0</span><span>·</span><span>8.1 MB</span><span>·</span><span>Android 6.0+</span>
+              </div>
+              <a class="btn btn-outline btn-block" href="https://github.com/nihaowshixiaow/nota/releases/download/v1.22.0/Nota-1.22.0-android.apk" download>↓ 下载 APK</a>
+              <div class="sha-row">
+                <code>7045D2F0…A115C4B</code>
+                <button class="copy-btn" data-copy="7045D2F0FA6DE9F6CE1E3A1CBA3F2738D690B16DFF46827F22A243A76A115C4B">复制 SHA-256</button>
+              </div>
+            </article>
+
+            <article class="download-card">
+              <div class="download-head">
+                <div class="download-icon">🧑‍💻</div>
+                <div>
+                  <span class="tag">开发者</span>
+                  <h3>源码压缩包</h3>
+                </div>
+              </div>
+              <p>React + TypeScript + Electron + Capacitor 完整源码，方便自行构建或二次开发。</p>
+              <div class="download-meta">
+                <span>v1.22.0</span><span>·</span><span>10.5 MB</span><span>·</span><span>MIT 许可</span>
+              </div>
+              <a class="btn btn-outline btn-block" href="https://github.com/nihaowshixiaow/nota/releases/download/v1.22.0/Nota-1.22.0-source.zip" download>↓ 下载源码</a>
+              <div class="sha-row">
+                <code>5072BC7E…9F7190E6</code>
+                <button class="copy-btn" data-copy="5072BC7EB68A21775F3FE2E5A32D88823BC39CB0476654A41A42B90D9F7190E6">复制 SHA-256</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="install-grid">
+            <div class="install-card">
+              <span class="step">01</span>
+              <h3>Windows 便携版</h3>
+              <p>下载 <code>.exe</code> → 双击运行。首次打开若出现 SmartScreen 提示，点“更多信息 → 仍要运行”。</p>
+            </div>
+            <div class="install-card">
+              <span class="step">02</span>
+              <h3>Windows zip 包</h3>
+              <p>右键解压到任意文件夹 → 进入文件夹运行 <code>Nota.exe</code>。整个文件夹可以随意移动。</p>
+            </div>
+            <div class="install-card">
+              <span class="step">03</span>
+              <h3>Android APK</h3>
+              <p>把 APK 传到手机 → 点击安装 → 如提示“未知来源”，在设置里允许当前文件管理器安装应用。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== TUTORIALS ===================== -->
+      <section class="section section-soft" id="tutorials">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">教程</span>
+            <h2>5 分钟上手 Nota</h2>
+            <p>从导入一张谱，到调 BPM、循环播放、编辑、导出，按下面的步骤走。</p>
+          </div>
+
+          <div class="tutorials" id="tutorialList">
+            <details class="tuto" open>
+              <summary>
+                <span class="tuto-no">01</span>
+                <span class="tuto-title">快速开始：导入 → 演奏 → 保存</span>
+                <span class="tuto-arrow">⌄</span>
+              </summary>
+              <div class="tuto-body">
+                <ol class="steps">
+                  <li><b>安装并打开 Nota</b>：Windows 直接运行 exe；Android 安装 APK。</li>
+                  <li><b>去“识别导入”</b>：把乐谱照片、PDF、MusicXML 或 MIDI 拖进上传框，或者点击选择文件。</li>
+                  <li><b>开始识别</b>：内置快速引擎约 0.2 秒；识别完成后可以点“保存并演奏”。</li>
+                  <li><b>在演奏台听</b>：空格播放 / 暂停，拖动进度条跳转，调 BPM 或循环模式。</li>
+                </ol>
+                <img class="tuto-img" src="assets/library.png" alt="Nota 曲库" />
+                <p class="tip">小提示：识别结果不理想时，先在“编辑”里点掉几个明显错误的音，再保存，比反复识别更快。</p>
+              </div>
+            </details>
+
+            <details class="tuto">
+              <summary>
+                <span class="tuto-no">02</span>
+                <span class="tuto-title">识谱导入：图片 / PDF / MusicXML / MIDI / .lysc</span>
+                <span class="tuto-arrow">⌄</span>
+              </summary>
+              <div class="tuto-body">
+                <h4>支持的格式</h4>
+                <ul class="bullets">
+                  <li><b>图片</b>：JPG / PNG / WebP / 手机拍照截图。正对谱面、光线均匀、去掉大片空白，识别率最高。</li>
+                  <li><b>PDF</b>：电子版 PDF（MuseScore / 来音等导出）效果最好；扫描件 PDF 等同于扫描图片。多页 PDF 可逐页切换识别。</li>
+                  <li><b>MusicXML / MXL</b>：音高、和弦、节奏 100% 来自文件本身，可做到和原谱一致。</li>
+                  <li><b>MIDI</b>：直接解析，音高和时值最准确。</li>
+                  <li><b>.lysc（来音制谱）</b>：私有加密格式，如果 App 能读出 MusicXML / JSON 数据会自动解析；读不了时会显示转换指南。</li>
+                </ul>
+                <img class="tuto-img" src="assets/import.png" alt="Nota 识别导入页" />
+                <p class="tip">想要更高精度：Windows 桌面版可在“设置 → 识别引擎”里配置 Audiveris 高精度引擎，或填入 AI 视觉模型的 Base URL / API Key。识谱后可在演奏台点“编辑”逐音修正。</p>
+              </div>
+            </details>
+
+            <details class="tuto">
+              <summary>
+                <span class="tuto-no">03</span>
+                <span class="tuto-title">编辑乐谱：音符键盘、打字输入、手机写谱</span>
+                <span class="tuto-arrow">⌄</span>
+              </summary>
+              <div class="tuto-body">
+                <h4>音符键盘</h4>
+                <ul class="bullets">
+                  <li><b>时值</b>：1 全音符 · 2 二分 · 3 四分 · 4 八分 · 5 十六分 · 6 三十二分；<code>.</code> 附点。</li>
+                  <li><b>变音 / 力度 / 谱表 / 八度</b>：♯ ♭ ♮、p / mf / f、高音 / 低音谱表、八度 ±。</li>
+                  <li><b>音名</b>：A–G 直接插入对应音名，显示当前八度。</li>
+                </ul>
+                <h4>点击加音符不会堆叠</h4>
+                <p>普通单击同一拍 = <b>替换该拍音高</b>；只有 <b>Shift + 单击</b> 才会叠成和弦。空位单击只添加你点的那个音，不会自动补休止符或其他符号。</p>
+                <h4>打字输入模式</h4>
+                <p>点「⌨ 打字输入」，从当前光标连续写：<code>A–G</code> 音名、<code>1–6</code> 时值、<code>.</code> 附点、<code>← →</code> 移光标、<code>Backspace</code> 删最后一个。</p>
+                <p><b>手机：</b>点「⌨ 调出键盘」会弹出系统输入法，同时编辑面板自动收成一条输入栏，五线谱完整露出来；点「完成输入」恢复编辑面板。</p>
+                <img class="tuto-img" src="assets/mobile-palette.png" alt="手机音符键盘" />
+              </div>
+            </details>
+
+            <details class="tuto">
+              <summary>
+                <span class="tuto-no">04</span>
+                <span class="tuto-title">播放设置：BPM、循环、预备提示音、全屏</span>
+                <span class="tuto-arrow">⌄</span>
+              </summary>
+              <div class="tuto-body">
+                <ul class="bullets">
+                  <li><b>BPM</b>：演奏台拖动进度条上方的速度滑条，或点 ±4 / 60 / 90 / 120 快速切换。</li>
+                  <li><b>循环模式</b>：左下角循环按钮在「单曲循环 / 专辑循环 / 顺序播放」之间切换。</li>
+                  <li><b>预备倒计时</b>：设置 → 播放 → 播放前预备时间，可选关闭 / 1 / 2 / 3 / 5 秒；打开「预备提示音」后每秒响一次钢琴提示音。每首曲子从头播放时谱面中央会显示大号倒计时。</li>
+                  <li><b>全屏</b>：演奏台右上角全屏按钮，全屏时自动隐藏侧边栏；再点一次退出。</li>
+                  <li><b>钢琴键盘</b>：右上角钢琴图标可隐藏 / 显示下方键盘，方便专注看谱。</li>
+                </ul>
+                <img class="tuto-img" src="assets/countin.png" alt="播放前预备倒计时" />
+                <img class="tuto-img" src="assets/countin-settings.png" alt="设置播放前预备时间与提示音" />
+              </div>
+            </details>
+
+            <details class="tuto">
+              <summary>
+                <span class="tuto-no">05</span>
+                <span class="tuto-title">参考图对照：半透明背景 / 悬浮小窗</span>
+                <span class="tuto-arrow">⌄</span>
+              </summary>
+              <div class="tuto-body">
+                <ol class="steps">
+                  <li>进入编辑模式，点编辑面板里的「参考图」，选择一张原谱图片。</li>
+                  <li>在弹出的窗口里选择显示方式：
+                    <ul class="bullets">
+                      <li><b>半透明背景</b>：默认 30% 透明度，整页叠在谱面下方，可以拖滑条调整。</li>
+                      <li><b>悬浮小窗口</b>：可拖动标题栏移动、右下角拉伸缩放、× 关闭，不挡谱面。</li>
+                    </ul>
+                  </li>
+                  <li>随时点「改悬浮窗 / 改背景」切换显示方式，或「清除」移除参考图。</li>
+                </ol>
+                <img class="tuto-img" src="assets/reference-window.png" alt="参考图悬浮小窗口" />
+                <p class="tip">参考图只用于对照，不会保存进乐谱、也不会被导出。</p>
+              </div>
+            </details>
+
+            <details class="tuto">
+              <summary>
+                <span class="tuto-no">06</span>
+                <span class="tuto-title">导出与备份：MusicXML、MIDI、曲库备份</span>
+                <span class="tuto-arrow">⌄</span>
+              </summary>
+              <div class="tuto-body">
+                <ul class="bullets">
+                  <li><b>导出单首谱</b>：在曲库卡片右上角「…」菜单里选择「导出 MusicXML」或「导出 MIDI」，也可以直接在识别结果页下载。</li>
+                  <li><b>MusicXML</b>：可用 MuseScore、Sibelius 等软件继续编辑；<b>MIDI</b>：导入其他音乐软件或音源。</li>
+                  <li><b>备份 / 恢复曲库</b>：设置 → 曲库 → 备份曲库数据 / 从备份恢复。</li>
+                  <li><b>清空数据</b>：设置 → 曲库 → 清空全部数据（不可恢复，建议先备份）。</li>
+                </ul>
+                <p class="tip">Nota 的曲库保存在本机 IndexedDB 中，不上传服务器；换设备前记得导出备份。</p>
+              </div>
+            </details>
+
+            <details class="tuto">
+              <summary>
+                <span class="tuto-no">07</span>
+                <span class="tuto-title">识谱不准怎么办？</span>
+                <span class="tuto-arrow">⌄</span>
+              </summary>
+              <div class="tuto-body">
+                <ul class="bullets">
+                  <li>优先用 <b>PDF / 导出图片</b>，比手机拍照准；拍照时正对谱面、避免阴影和倾斜。</li>
+                  <li>把图片裁剪到只有乐谱主体，去掉大片空白和无关文字。</li>
+                  <li>Windows 桌面版切换到 <b>Audiveris</b> 高精度引擎，或在设置里配置 AI 视觉模型。</li>
+                  <li>识别后进编辑模式逐音修正；需要 100% 一致时，直接导入 MusicXML / MIDI。</li>
+                  <li>复杂和弦、多声部谱，内置快速引擎可能漏音，属于正常现象。</li>
+                </ul>
+                <img class="tuto-img" src="assets/beam-stem.png" alt="连梁与符干效果" />
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== FAQ ===================== -->
+      <section class="section" id="faq">
+        <div class="container faq-wrap">
+          <div class="section-head">
+            <span class="eyebrow">常见问题</span>
+            <h2>你可能会问</h2>
+          </div>
+
+          <details class="faq-item">
+            <summary>Nota 是免费的吗？数据存在哪里？</summary>
+            <p>免费使用。曲库、设置、识别结果都保存在你本机的浏览器 / App 存储（IndexedDB）里，不会上传到服务器；换设备前请在设置里备份。</p>
+          </details>
+          <details class="faq-item">
+            <summary>支持哪些系统？</summary>
+            <p>Windows 10 / 11 64 位（便携版 exe 或 zip），以及 Android 6.0 及以上（APK）。手机与电脑是同一套 UI 逻辑，手机端有专门的音符键盘布局。</p>
+          </details>
+          <details class="faq-item">
+            <summary>Windows 提示“未知发布者”怎么办？</summary>
+            <p>安装包没有购买代码签名证书，所以 SmartScreen 会提示。点“更多信息 → 仍要运行”即可；也可以先用 SHA-256 校验下载文件。</p>
+          </details>
+          <details class="faq-item">
+            <summary>Android 安装提示被阻止？</summary>
+            <p>在系统设置里允许当前浏览器 / 文件管理器“安装未知应用”，然后重新点击 APK 安装。</p>
+          </details>
+          <details class="faq-item">
+            <summary>PDF 导入失败怎么办？</summary>
+            <p>请先升级到 v1.20.0 及以上（修复了桌面 app:// 与手机 WebView 下 PDF worker 无法加载的问题）。如果仍失败，把 PDF 用 Chrome 打开后“打印 → 另存为 PDF”再导入，或把报错信息反馈给我们。</p>
+          </details>
+          <details class="faq-item">
+            <summary>为什么 .lysc 文件不能直接读？</summary>
+            <p>.lysc 是来音制谱的加密私有格式，没有公开规范或密钥就无法直接解密。请在来音里导出 <b>PDF</b> 或 <b>MIDI</b> 再导入 Nota，效果更好。App 内也会显示转换指南。</p>
+          </details>
+          <details class="faq-item">
+            <summary>手机输入法弹不出来 / 编辑面板挡住谱面？</summary>
+            <p>在打字输入模式下点「⌨ 调出键盘」会聚焦隐藏输入框并调起系统键盘，同时编辑面板自动收成一条输入栏；点「完成输入」恢复。如果键盘没弹出，再点一次按钮，或检查系统输入法设置。</p>
+          </details>
+          <details class="faq-item">
+            <summary>连梁音符的符干 / 符尾朝向不对？</summary>
+            <p>已在 v1.22.0 修复：连梁组现在会统一计算符干方向。升级后若还有个别异常，把谱面截图发给开发者定位。</p>
+          </details>
+          <details class="faq-item">
+            <summary>升级会不会丢曲库？</summary>
+            <p>不会。覆盖安装 / 替换便携版程序不会删除本机曲库；但清除浏览器数据或卸载 App 会。重要乐谱建议定期备份。</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- ===================== FINAL CTA ===================== -->
+      <section class="section final-cta">
+        <div class="container">
+          <div class="cta-card">
+            <div>
+              <span class="eyebrow">准备好了吗</span>
+              <h2>把你的五线谱交给 Nota</h2>
+              <p>下载后 3 分钟，就能听到第一首由它演奏的曲子。</p>
+            </div>
+            <div class="cta-actions">
+              <a class="btn btn-primary btn-lg" href="https://github.com/nihaowshixiaow/nota/releases/download/v1.22.0/Nota-1.22.0-portable.exe" download>↓ Windows 版</a>
+              <a class="btn btn-outline btn-lg" href="https://github.com/nihaowshixiaow/nota/releases/download/v1.22.0/Nota-1.22.0-android.apk" download>📱 Android 版</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark">♪</span>
+          <div>
+            <b>Nota · 五线谱演奏台</b>
+            <p>让乐谱自己弹起来。Windows / Android 免费使用。</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="#download">下载</a>
+          <a href="#tutorials">教程</a>
+          <a href="#faq">常见问题</a>
+          <a href="#top">回到顶部</a>
+        </div>
+      </div>
+      <div class="container footer-fine">
+        <p>当前版本 v1.22.0 · 更新于 2026-10-30 · 官网地址：<b>http://notafun.com/</b></p>
+        <p>
+          开源致谢：VexFlow（MIT）、Salamander Grand Piano 采样（CC-BY 3.0）、pdfjs（Apache-2.0）、
+          React / Vite / Electron / Capacitor。Nota 与任何第三方制谱软件无关联。
+        </p>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
