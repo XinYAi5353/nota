@@ -13,13 +13,13 @@ nota-site/
 ├── app.js                     # 移动菜单 / 导航高亮 / 复制 SHA / 手风琴
 ├── assets/                    # 截图与 favicon
 └── downloads/                 # 安装包（下载按钮指向 GitHub Releases）
-    ├── Nota-1.41.0-portable.exe
-    ├── Nota-1.41.0-win-x64.zip
-    ├── Nota-1.41.0-android.apk
-    └── Nota-1.41.0-source.zip
+    ├── Nota-1.42.0-portable.exe
+    ├── Nota-1.42.0-win-x64.zip
+    ├── Nota-1.42.0-android.apk
+    └── Nota-1.42.0-source.zip
 ```
 
-当前版本 **v1.41.0**（2026-10-30）。
+当前版本 **v1.42.0**（2026-10-30）。
 
 ## 本地预览 / 本地域名 http://notafun.com/
 
@@ -87,7 +87,7 @@ npx serve . -l 8080
 
 1. 把新版本安装包复制进 `downloads/`；
 2. 修改 `index.html`：
-   - 顶部版本号（`v1.41.0`，搜索 `version-pill`）；
+   - 顶部版本号（`v1.42.0`，搜索 `version-pill`）；
    - 下载卡片里的版本、大小、`href` 文件名；
    - SHA-256 完整值与卡片上显示的短哈希（`data-copy` 属性 + 按钮上方文本）；
 3. 更新教程 / FAQ 里提到的版本修复说明（如有）；
