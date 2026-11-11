@@ -1211,3 +1211,245 @@ code {
     scroll-behavior: auto !important;
   }
 }
+
+
+/* ============================================================
+   2026 模式演示升级
+   ============================================================ */
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 18px;
+}
+
+.hero-tags span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink-3);
+  font-size: 11.5px;
+  backdrop-filter: blur(8px);
+}
+
+.feature-card {
+  transition: transform 0.24s var(--ease), box-shadow 0.24s var(--ease), border-color 0.24s var(--ease);
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(47, 107, 255, 0.22);
+  box-shadow: var(--shadow);
+}
+
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+.modes-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(900px 420px at 15% 0%, rgba(47, 107, 255, 0.08), transparent 65%),
+    radial-gradient(760px 420px at 90% 20%, rgba(255, 196, 90, 0.08), transparent 62%),
+    #f8faff;
+}
+
+.mode-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 22px;
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(14px);
+}
+
+.mode-tab {
+  height: 38px;
+  padding: 0 15px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-3);
+  font-size: 12.5px;
+  font-weight: 550;
+  white-space: nowrap;
+  transition: background 0.18s var(--ease), color 0.18s var(--ease), box-shadow 0.18s var(--ease);
+}
+
+.mode-tab:hover {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.mode-tab.active {
+  background: var(--ink);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(20, 24, 38, 0.18);
+}
+
+.mode-panels {
+  position: relative;
+}
+
+.mode-panel {
+  display: none;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  gap: clamp(22px, 4vw, 52px);
+  align-items: center;
+  padding: clamp(22px, 3.6vw, 42px);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: #fff;
+  box-shadow: var(--shadow-lg);
+}
+
+.mode-panel.active {
+  display: grid;
+  animation: mode-in 0.32s var(--ease);
+}
+
+@keyframes mode-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.mode-kicker {
+  display: inline-block;
+  margin-bottom: 9px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+
+.mode-copy h3 {
+  margin: 0 0 10px;
+  font-size: clamp(22px, 2.5vw, 31px);
+  letter-spacing: -0.035em;
+  line-height: 1.25;
+}
+
+.mode-copy p {
+  margin: 0 0 15px;
+  color: var(--ink-3);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.mode-copy ul {
+  display: grid;
+  gap: 7px;
+  margin: 0 0 18px;
+  padding: 0;
+  list-style: none;
+}
+
+.mode-copy li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--ink-2);
+  font-size: 12.5px;
+}
+
+.mode-copy li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 11px;
+}
+
+.mode-shot {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fbfcfe;
+  box-shadow: 0 16px 44px rgba(20, 24, 38, 0.12);
+}
+
+.mode-shot img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mode-shot figcaption {
+  padding: 9px 12px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-4);
+  font-size: 10.5px;
+  background: #fff;
+}
+
+.demo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.demo-status {
+  color: var(--ink-4);
+  font-size: 10.5px;
+}
+
+.demo-status.is-playing {
+  color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .mode-panel {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .mode-shot {
+    order: -1;
+  }
+
+  .mode-tabs {
+    border-radius: 18px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mode-tab {
+    flex: 1 1 45%;
+    min-height: 38px;
+    height: auto;
+    padding: 8px 10px;
+    white-space: normal;
+  }
+
+  .hero-tags {
+    margin-top: 14px;
+  }
+}
+
+@media (max-width: 520px) {
+  .mode-tab {
+    flex: 1 1 calc(50% - 6px);
+  }
+
+  .mode-copy h3 {
+    font-size: 23px;
+  }
+}
