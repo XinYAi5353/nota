@@ -32,6 +32,7 @@
 
         <nav class="nav-links" id="navLinks" aria-label="主导航">
           <a href="#features">功能</a>
+          <a href="#modes">模式</a>
           <a href="#screens">界面</a>
           <a href="#download">下载</a>
           <a href="#tutorials">教程</a>
@@ -52,13 +53,13 @@
         <div class="hero-glow" aria-hidden="true"></div>
         <div class="container hero-grid">
           <div class="hero-copy">
-            <span class="eyebrow">Windows · Android · 完全离线</span>
+            <span class="eyebrow">Windows · Android · 完全离线 · 练耳</span>
             <h1>
               让五线谱，<br />
               <span class="grad">自己弹起来</span>
             </h1>
             <p class="lead">
-              Nota 是一款白色极简的五线谱演奏台：拍照或导入 PDF 自动识谱，用真实钢琴采样演奏；可调 BPM、单曲 / 专辑循环，还能像打字一样写谱。
+              Nota 是一款白色极简的五线谱演奏台：识谱导入、钢琴演奏、编辑写谱，还内置练耳与收藏循环。拍照、导入 MusicXML/MIDI，或从零写一首；可调 BPM、单曲/专辑/收藏循环，甚至能听出大三度和小三度。
             </p>
 
             <div class="hero-cta">
@@ -77,6 +78,12 @@
               <li>✓ 数据只存本机</li>
               <li>✓ Windows / Android</li>
             </ul>
+            <div class="hero-tags" aria-label="更多模式">
+              <span>🎧 听音准</span>
+              <span>🥁 听节奏</span>
+              <span>♥ 收藏循环</span>
+              <span>⌨ 四行输入</span>
+            </div>
           </div>
 
           <div class="hero-visual">
@@ -143,6 +150,109 @@
         </div>
       </section>
 
+      <!-- ===================== MODES ===================== -->
+      <section class="section modes-section" id="modes">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">更多模式</span>
+            <h2>不只播放，还能听、练、收藏、写</h2>
+            <p>从识谱到练耳，从收藏循环到自由编辑，Nota 把一套完整的学习与演奏工具放在同一个白色界面里。</p>
+          </div>
+
+          <div class="mode-tabs" role="tablist" aria-label="Nota 模式演示">
+            <button class="mode-tab active" data-mode="third" role="tab" aria-selected="true">🎧 听音准</button>
+            <button class="mode-tab" data-mode="rhythm" role="tab" aria-selected="false">🥁 听节奏</button>
+            <button class="mode-tab" data-mode="favorites" role="tab" aria-selected="false">♥ 收藏循环</button>
+            <button class="mode-tab" data-mode="keyboard" role="tab" aria-selected="false">⌨ 键盘编辑</button>
+          </div>
+
+          <div class="mode-panels">
+            <article class="mode-panel active" data-panel="third">
+              <div class="mode-copy">
+                <span class="mode-kicker">练耳 · 听音准</span>
+                <h3>先听，再答题，最后才看谱</h3>
+                <p>自动在 C3–C6 随机弹两个音，让你判断是大三度还是小三度。答题前不显示五线谱和音名，不泄露答案。</p>
+                <ul>
+                  <li>大三度 / 小三度两种模式</li>
+                  <li>可选纯 C 大调、全音符时值</li>
+                  <li>3 秒预备 + 答题后显示音程谱</li>
+                  <li>人声报「第几个音」，单音训练更清楚</li>
+                </ul>
+                <div class="demo-actions">
+                  <button class="btn btn-primary demo-tone" data-demo="maj">▶ 试听大三度</button>
+                  <button class="btn btn-outline demo-tone" data-demo="min">▶ 试听小三度</button>
+                  <span class="demo-status" data-demo-status>点击按钮试听（合成音）</span>
+                </div>
+              </div>
+              <figure class="mode-shot">
+                <img src="assets/ear-third.png" alt="Nota 练耳：大三度/小三度听辨" loading="lazy" />
+                <figcaption>练耳 · 大三度 / 小三度</figcaption>
+              </figure>
+            </article>
+
+            <article class="mode-panel" data-panel="rhythm">
+              <div class="mode-copy">
+                <span class="mode-kicker">练耳 · 听节奏</span>
+                <h3>勾选节奏型，随机组合播放</h3>
+                <p>软件从你选的节奏型里随机抽取、随机组合，绝不按你选择的顺序播放；听后显示这次随机生成的节奏。</p>
+                <ul>
+                  <li>二分 / 四分 / 二八 / 四十六 / 前八后十六</li>
+                  <li>可调随机小节数、每小节停顿</li>
+                  <li>可调听几遍、BPM、预备时间</li>
+                  <li>还支持自己点五线谱创建节奏并命名保存</li>
+                </ul>
+                <div class="demo-actions">
+                  <button class="btn btn-primary demo-tone" data-demo="rhythm">▶ 试听二八节奏</button>
+                  <span class="demo-status" data-demo-status>80 BPM · 标准音 A4</span>
+                </div>
+              </div>
+              <figure class="mode-shot">
+                <img src="assets/ear-rhythm.png" alt="Nota 练耳：随机听节奏" loading="lazy" />
+                <figcaption>练耳 · 听节奏</figcaption>
+              </figure>
+            </article>
+
+            <article class="mode-panel" data-panel="favorites">
+              <div class="mode-copy">
+                <span class="mode-kicker">收藏合集</span>
+                <h3>只播放喜欢的谱，循环也只循环它们</h3>
+                <p>点封面上的 ♥ 收藏，曲库可切换「全部曲库 / 收藏合集」；一键收藏循环，播放队列也只包含收藏谱。</p>
+                <ul>
+                  <li>收藏按钮与收藏合集</li>
+                  <li>只播放收藏 / 收藏内循环</li>
+                  <li>队列、循环标记同步收藏范围</li>
+                  <li>播放器里也能直接收藏当前曲</li>
+                </ul>
+                <a class="btn btn-outline" href="#download">下载后体验完整收藏循环</a>
+              </div>
+              <figure class="mode-shot">
+                <img src="assets/favorites.png" alt="Nota 收藏合集与收藏循环" loading="lazy" />
+                <figcaption>收藏合集 · 只播放收藏</figcaption>
+              </figure>
+            </article>
+
+            <article class="mode-panel" data-panel="keyboard">
+              <div class="mode-copy">
+                <span class="mode-kicker">编辑 · 四行输入</span>
+                <h3>手机与电脑都能像虚拟键盘一样写谱</h3>
+                <p>编辑面板切换成四行输入：谱表、时值、简谱 1–7、八度；手机紧凑贴合，电脑可自由拉伸，输入时不用调系统键盘。</p>
+                <ul>
+                  <li>简谱 1–7 直接写音符</li>
+                  <li>音符 / 休止符、升降号、调号</li>
+                  <li>附点、时值 ±、高低八度</li>
+                  <li>删除键、保存 BPM、自由和弦</li>
+                </ul>
+                <a class="btn btn-outline" href="#screens">查看界面截图</a>
+              </div>
+              <figure class="mode-shot">
+                <img src="assets/keyboard-inline.png" alt="Nota 四行输入键盘" loading="lazy" />
+                <figcaption>编辑 · 四行输入键盘</figcaption>
+              </figure>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <!-- ===================== SCREENS ===================== -->
       <section class="section section-soft" id="screens">
         <div class="container">
@@ -185,7 +295,7 @@
             <span class="eyebrow">下载</span>
             <h2>选择你的版本</h2>
             <p>
-              当前版本 <b>v1.44.0</b> · 更新于 2026-10-30 · Windows 10/11 64 位、Android 6.0+。
+              当前版本 <b>v1.44.0</b> · 更新于 2026-11-11 · Windows 10/11 64 位、Android 6.0+。
               安装包下载由 GitHub Releases 提供（国内访问可能需要加速）。所有安装包都没有代码签名，安装时若系统提示请选择“仍要运行 / 信任”。
             </p>
           </div>
@@ -519,7 +629,7 @@
         </div>
       </div>
       <div class="container footer-fine">
-        <p>当前版本 v1.44.0 · 更新于 2026-10-30 · 官网地址：<b>http://notafun.com/</b></p>
+        <p>当前版本 v1.44.0 · 更新于 2026-11-11 · 官网地址：<b>http://notafun.com/</b></p>
         <p>
           开源致谢：VexFlow（MIT）、Salamander Grand Piano 采样（CC-BY 3.0）、pdfjs（Apache-2.0）、
           React / Vite / Electron / Capacitor。Nota 与任何第三方制谱软件无关联。
