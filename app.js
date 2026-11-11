@@ -36,7 +36,7 @@
   });
 
   /* ---------------- 导航高亮 ---------------- */
-  const sectionIds = ['features', 'screens', 'download', 'tutorials', 'faq'];
+  const sectionIds = ['features', 'modes', 'screens', 'download', 'tutorials', 'faq'];
   const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
   const linkMap = new Map(
     $$('#navLinks a')
@@ -145,5 +145,100 @@
   const year = new Date().getFullYear();
   $$('[data-year]').forEach((el) => {
     el.textContent = String(year);
+  });
+})();
+
+
+/* ============================================================
+   模式切换 + 试听演示（2026）
+   ============================================================ */
+(() => {
+  'use strict';
+
+  const tabs = Array.from(document.querySelectorAll('.mode-tab'));
+  const panels = Array.from(document.querySelectorAll('.mode-panel'));
+
+  const setMode = (mode) => {
+    tabs.forEach((tab) => {
+      const on = tab.dataset.mode === mode;
+      tab.classList.toggle('active', on);
+      tab.setAttribute('aria-selected', String(on));
+    });
+    panels.forEach((panel) => {
+      panel.classList.toggle('active', panel.dataset.panel === mode);
+    });
+  };
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => setMode(tab.dataset.mode || 'third'));
+  });
+
+  let audioCtx = null;
+  const ensureCtx = () => {
+    if (!audioCtx) {
+      const Ctor = window.AudioContext || window.webkitAudioContext;
+      if (!Ctor) return null;
+      audioCtx = new Ctor({ latencyHint: 'interactive' });
+    }
+    if (audioCtx.state === 'suspended') void audioCtx.resume();
+    return audioCtx;
+  };
+
+  const playTone = (ctx, midi, start, dur, strength = 0.15) => {
+    const freq = 440 * Math.pow(2, (midi - 69) / 12);
+    const osc = ctx.createOscillator();
+    const osc2 = ctx.createOscillator();
+    const gain = ctx.createGain();
+    const filter = ctx.createBiquadFilter();
+    osc.type = 'triangle';
+    osc.frequency.value = freq;
+    osc2.type = 'sine';
+    osc2.frequency.value = freq * 2;
+    filter.type = 'lowpass';
+    filter.frequency.value = Math.min(5200, freq * 7);
+    filter.Q.value = 0.35;
+    gain.gain.setValueAtTime(0.0001, start);
+    gain.gain.linearRampToValueAtTime(strength, start + 0.012);
+    gain.gain.exponentialRampToValueAtTime(0.0001, start + dur);
+    osc.connect(filter);
+    osc2.connect(filter);
+    filter.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start(start);
+    osc2.start(start);
+    osc.stop(start + dur + 0.02);
+    osc2.stop(start + dur + 0.02);
+  };
+
+  const demo = (mode, statusEl) => {
+    const ctx = ensureCtx();
+    if (!ctx) {
+      statusEl.textContent = '当前浏览器不支持试听';
+      return;
+    }
+    const start = ctx.currentTime + 0.04;
+    statusEl.classList.add('is-playing');
+    if (mode === 'maj') {
+      playTone(ctx, 60, start, 1.15, 0.13);
+      playTone(ctx, 64, start, 1.15, 0.12);
+      statusEl.textContent = '大三度：C4 + E4（4 个半音）';
+    } else if (mode === 'min') {
+      playTone(ctx, 60, start, 1.15, 0.13);
+      playTone(ctx, 63, start, 1.15, 0.12);
+      statusEl.textContent = '小三度：C4 + E♭4（3 个半音）';
+    } else if (mode === 'rhythm') {
+      const beats = [69, 69, 69, 69];
+      beats.forEach((midi, i) => playTone(ctx, midi, start + i * 0.42, 0.32, 0.12));
+      statusEl.textContent = '二八节奏：A4 · 80 BPM 示意';
+    }
+    window.setTimeout(() => statusEl.classList.remove('is-playing'), 2100);
+  };
+
+  document.querySelectorAll('.demo-tone').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const panel = btn.closest('.mode-panel');
+      const status = panel?.querySelector('[data-demo-status]');
+      if (status) demo(btn.dataset.demo || '', status);
+    });
   });
 })();
