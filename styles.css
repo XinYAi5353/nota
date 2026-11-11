@@ -1453,3 +1453,20 @@ section[id] {
     font-size: 23px;
   }
 }
+
+
+.float-ico, .btn-ico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  margin-right: 4px;
+  font-size: 0.95em;
+  line-height: 1;
+  vertical-align: -0.08em;
+  color: currentColor;
+  font-family: 'Segoe UI Symbol', 'Inter', sans-serif;
+}
+.float-ico { color: var(--accent); font-size: 1.05em; }
+
